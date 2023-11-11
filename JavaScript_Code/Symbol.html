@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+       The Symbol data type is used to create unique identifiers in JavaScript.
+        Unlike the other data types, even if two symbols appear to be identical
+        and have the same name, JavaScript guarantees that they'll be unique.
+      */
+      let symbol1 = Symbol("my symbol");
+      let symbol2 = Symbol("my symbol");
+      console.log(symbol1 === symbol2);
+    </script>
+  </body>
+</html>
