@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Strings
+      /*
+                    A string is any literal text. It can be made up of any number of
+                    characters, including letters, numbers, symbols, and white space. To
+                    create a string, enclose a value in matching single or double quotes, like
+                    this:
+                  */
+      let catName = "Mr. Furley";
+      /* When you define your string with single quotes, you can't use single quotes
+                  inside, and vice-versa. In that case you use double quotes inside and vice-versa.
+                  */
+      let famousQuote = '"Nothing great was ever achieved without enthusiasm."';
+      console.log(famousQuote);
+
+      //Using escape codes to write special characters in strings.
+      // Single quote
+      let singleQuoteString = "This is a single quote: ' inside a string.";
+      console.log(singleQuoteString);
+
+      // Double quote
+      let doubleQuoteString = 'This is a double quote: " inside a string.';
+      console.log(doubleQuoteString);
+
+      // Backslash
+      let backslashString = "This is a backslash: \\ inside a string.";
+      console.log(backslashString);
+
+      // New line
+      let newLineString = "This is a string\nwith a new line.";
+      console.log(newLineString);
+
+      // Carriage return
+      let carriageReturnString = "This is a string\rwith a carriage return.";
+      console.log(carriageReturnString);
+
+      // Tab
+      let tabString = "This is a string\twith a tab.";
+      console.log(tabString);
+
+      // Backspace
+      let backspaceString = "This is a string with a backspace.\b";
+      console.log(backspaceString);
+
+      // Form feed
+      let formFeedString = "This is a string with a form feed.\f";
+      console.log(formFeedString);
+
+      //Template strings.
+      /*The useful thing about template literals is that you can include
+                  JavaScript expressions inside them by surrounding the expression with
+                  curly braces preceded by a dollar sign ($).
+                 */
+      // A template string in action.
+      let orderTotal = 39.99;
+      let itemPurchased = "Pizza";
+      let customer = "Freddy";
+      let thankYou = `${customer}, thank you for your order of ${itemPurchased}.
+      Your payment of ${orderTotal} was successful.`;
+      console.log(thankYou);
+
+      //Using string functions.
+
+      /*charAt(position):**
+         - `charAt` is used to retrieve the character at a specified position
+         in a string.
+         - Example:
+         */
+      let randomLetters = "pdfsdj";
+      let characterAtIndex4 = randomLetters.charAt(4);
+      console.log(characterAtIndex4); // Output: 'd'
+
+      /*concat(string1, string2, ...):
+         - `concat` is used to combine (concatenate) two or more strings.
+         - Example:
+         */
+      let houseNumber = "555";
+      let streetName = "Shady Lane";
+      let fullAddress = houseNumber.concat(" ", streetName);
+      console.log(fullAddress); // Output: '555 Shady Lane'
+
+      /*indexOf(searchValue):
+         - `indexOf` searches a string and returns the position of
+         the first occurrence of the specified character or substring.
+         - Example:
+          */
+      let typeOfTree = "Pine";
+      let positionOfE = typeOfTree.indexOf("e");
+      console.log(positionOfE); // Output: 1
+
+      /*split(separator):
+         - `split` is used to split a string into an array of substrings
+         based on a specified separator.
+         - Example:
+          */
+      let vowelsList = "a,e,i,o,u";
+      let vowelsArray = vowelsList.split(",");
+      console.log(vowelsArray); // Output: ['a', 'e', 'i', 'o', 'u']
+
+      /*substring(startIndex, endIndex):
+         - `substring` extracts characters within a string between
+         two specified positions.
+         - Example:
+          */
+      let phoneNumber = "313-555-1234";
+      let extractedDigits = phoneNumber.substring(4, 12);
+      console.log(extractedDigits); // Output: '555-1234'
+
+      /* slice(startIndex, endIndex):
+         - `slice` works similarly to `substring`, but it returns
+         an empty string if the first index is larger than the second.
+         - Example:
+          */
+      let phoneNumber2 = "313-555-1234";
+      let slicedDigits = phoneNumber.slice(12, 4);
+      console.log(slicedDigits); // Output: '555-1234'
+
+      /* replace(oldValue, newValue):
+         - `replace` finds a specified string and replaces it with another string.
+         - Example:
+          */
+      let message = "Learn PYTHON.";
+      let updatedMessage = message.replace("PYTHON", "JavaScript");
+      console.log(updatedMessage); // Output: 'Learn JavaScript.'
+
+      /* toLowerCase():**
+         - `toLowerCase` converts all characters in a string to lowercase.
+         - Example:
+          */
+      let username = "Freddy";
+      let lowercaseUsername = username.toLowerCase();
+      console.log(lowercaseUsername); // Output: 'freddy'
+
+      /*toUpperCase():
+         - `toUpperCase` converts all characters in a string to uppercase.
+         - Example:
+          */
+      let stateName = "texas";
+      let uppercaseStateName = stateName.toUpperCase();
+      console.log(uppercaseStateName); // Output: 'TEXAS'
+    </script>
+  </body>
+</html>

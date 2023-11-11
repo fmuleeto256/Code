@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Using (let)
+      let phoneNumber; // This is called declaring a variable.
+      phoneNumber = +256701313855; // This is called initializing a variable.
+      //Assigning a value to a variable.
+      //We can also declare and intialize at once.
+      let favoriteColor = "red";
+      //Another example.
+
+      let firstName = "Freddy";
+      let secondName = "Muleeto";
+      let fullName = secondName + " " + firstName;
+      console.log(fullName);
+      firstName = "John"; // changing the value of the first variable.
+      console.log(fullName); // However, no changes are made. Why?
+
+      //Another example.
+
+      let firstNumber = prompt("Pick a number:");
+      let secondNumber = prompt("Pick second number:");
+      let sum = parseInt(firstNumber) + parseInt(secondNumber);
+      alert(sum);
+      //Using (const)
+      // Once declared, a const can't be redeclared.
+      //We have to declare and initialize a const at the same time becasue it can't be changed.
+      const likesTacos = true;
+      //Naming of constants
+      // Since they don't change, it is advisable to use UPPER_CASE when naming consts.
+      const LIKES_TACOS = true;
+    </script>
+  </body>
+</html>
