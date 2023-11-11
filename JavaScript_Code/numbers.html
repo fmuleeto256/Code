@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        To make variable with a number data type, assign a number(without quotes) or an
+        expression that results to a number to a variable.
+        For example:
+        */
+      let number = 11;
+      let number2 = 12 + 15;
+      // Working with number functions.
+      //parseInt converts a number to an integer by removing everything after the decimal point.
+      parseInt(5.783663); // Ouput is 5
+      /*parseFloat tells the computer to treat the number as a varaibale, which means it will
+      include the decimals
+      */
+      console.log(parseFloat(10.5)); // Output is 10.00
+      //The most common use of parseInt and parseFloat is to convert strings into numbers.
+      let tip = "18.50";
+      let total = 40;
+      let tax = 0;
+      let orderTotal = tip + total + tax;
+      orderTotal = parseFloat(tip) + 40 + 0; // parseFloat converts the string(tip) to a number.
+      console.log(orderTotal);
+    </script>
+  </body>
+</html>
