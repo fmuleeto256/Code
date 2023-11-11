@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+         Boolean variables store one of two possible values: either true or false.
+         When you compare items in JavaScript, the result is a Boolean.
+         Forexample:
+       */
+      console.log(3 < 10); // This will return true
+      console.log(90 < 10); // This will return false
+      console.log(true === false); //This will return false
+      console.log(0 !== "0"); // This will return true.
+      console.log(5 == "5"); // This will return true (type coercion)
+      console.log("oranges" === "apples");
+      // Converting to Boolean
+      /*Any value in JavaScript can be converted to a Boolean by using the !!
+       operator.
+       */
+      console.log(!!"javascript is awesome"); // This returns true.
+      console.log(!!"I am the best javascript programmer"); //This retruns true.
+      console.log(!!0); //This will return false.
+      console.log(!!""); // This will return false.
+      console.log(!!99); // This will return true
+      console.log(!!null); // This will return false.
+      /*
+         Notice that some of the values in this list convert to true and others
+         convert to false. How do you know which is which? The answer lies in
+         the idea of Truthy and Falsy values.
+         How do you know which is which? The answer lies in
+         the idea of Truthy and Falsy values.
+       */
+      //Truthy and Falsy.
+      /*You can always know whether a value, when converted to a Boolean,
+        will be true or false by remembering a short list of items that always
+        convert to false. These values are called “falsy” in JavaScript
+       */
+      /*
+      false
+      0(zero)
+      -0(negative zero)
+      0n(BigInt Zero)
+      "" (An empty string)
+      null
+      undefined
+      NaN
+      */
+      // All those values are falsy values. The rest are truthy values when converted to Boolean.
+      //Truthy and Falsy help us to simplify code.
+      //Take this example.
+      let city = "New York";
+      if (city === "") {
+        console.log("City is a required field"); // This is checking if city is an empty string which is a falsy.
+      }
+      // Or we can say.
+
+      if (!city) {
+        console.log("City is a required value"); // This is checking if city is false.
+      } else {
+        console.log(`The city is ${city}`);
+      }
+    </script>
+  </body>
+</html>
