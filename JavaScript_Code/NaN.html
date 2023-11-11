@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+       NaN stands for Not a Number. NaN is what you get when you try to
+       perform impossible mathematical operations or when you try to perform
+       mathematical operations with strings.
+      */
+      //Examples of operations that return NaN
+      //1. Math Operations where the result is not a real number.
+      //For example: Calculating the square root of a negatoive number.
+      console.log(Math.sqrt(-1));
+
+      //Attempting any math operation involving a string other than with the addition operator.
+      console.log("yarn" / "book");
+
+      //Attempting to convert a string to a number.
+      console.log(parseInt("Freddy"));
+    </script>
+  </body>
+</html>
