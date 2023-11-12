@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* An object is a collection of key-value pairs, where each key is a string (or symbol) that 
+      acts as an identifier for a value. Objects are containers for related data.For example, an 
+      object called customerInfo might
+      contain a name and an address and various other values related to a
+      particular customer of a business.
+      */
+      //An object in action.
+
+      const customerInfo = {
+        name: "Muleeto Fred",
+        address: "2345 Kampala Uganda",
+        City: "Kampala",
+        District: "Wakiso",
+        Zipcode: 7865,
+        Country: "Uganda",
+        customerId: 4,
+        isInLotteryClub: true,
+      };
+      // The values inside the object can be of any data type. Infact, they can even be objects themselves.
+      //Objects are usually created with const.The result is that the object itself is
+      //unchangeable, though the values inside it can still be changed.
+      //We can access the properties of an object using the dot notation.
+      console.log(customerInfo.name); // Output: Muleeto Fred
+
+      // Add new properties
+
+      customerInfo.isMarried = true;
+      console.log(customerInfo);
+
+      //Modifying existing properties.
+      customerInfo.customerId = 5;
+      console.log(customerInfo);
+
+      //Functions within objects are called methods.
+      let person = {
+        name: "John",
+        greet: function () {
+          console.log(`Hello, ${this.name}!`); // (this) refers to the object person.
+        },
+      };
+      person.greet(); // Output: Hello, John!
+
+      //Using the bracket notation. // The bracket notation is preffered for properties
+      //that would cause syntax errors with the dot notation.
+      console.log(person);
+    </script>
+  </body>
+</html>
