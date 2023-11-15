@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="pets"></div>
+    <script>
+      //This iterates over any iterable object, like arrays, strings, sets, maps, etc.
+      //It directly iterates over the items not the properties.
+      //A (for--of) in action
+
+      const pets = ["dog", "cat", "hen", "snake", "fish"];
+      let listOfPets = "<h1>This is the list of pets</h1>";
+      for (let pet of pets) {
+        listOfPets += `<br>${pet}<br>`;
+        console.log(listOfPets);
+      }
+      document.getElementById("pets").innerHTML = listOfPets;
+
+      //We can also create a variable for the document as in the example below.
+
+      /*const pets = ["dog", "cat", "hen", "snake", "fish"];
+      let listOfPets = "<h1>This is the list of pets</h1>";
+
+      for (let pet of pets) {
+        console.log(pet);
+        listOfPets += `<br>${pet}<br>`;
+      }
+
+      let list = document.getElementById("pets");
+      list.innerHTML = listOfPets;
+      */
+    </script>
+  </body>
+</html>

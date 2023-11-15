@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+      Break 
+      The break statement is used to exit a loop prematurely, before its normal termination. 
+      It can be used with for, while, and do-while loops, as well as with switch statements.  
+        */
+      for (let i = 0; i < 5; i++) {
+        console.log(i);
+        if (i === 2) {
+          break; // exit the loop when i is equal to 2
+        }
+      }
+      /*
+      Continue:
+      The continue statement is used to skip a loop and move on to the next 
+      iteration of the loop. It is often used to skip certain iterations based on a condition.
+      */
+      for (let i = 0; i <= 5; i++) {
+        if (i === 2) {
+          continue; // skip the loop for i equal to 2
+        }
+        console.log(i);
+      }
+    </script>
+  </body>
+</html>

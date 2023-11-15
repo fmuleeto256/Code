@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      //We use (for--in) to iterate properties in an object. 
+      const person = {
+        name: "John",
+        age: 27,
+        maritalStatus: "married",
+        isAdult: true,
+      };
+      let personDetails = "<h1>Information about a person</h1>";
+      for (let prop in person) {
+        personDetails += `<br>${prop}: ${person[prop]}<br>`;
+      }
+      document.getElementById("root").innerHTML = personDetails;
+      //for--in is a bit outdated. There are better ways to use. 
+    </script>
+  </body>
+</html>
+    </script>
+  </body>
+</html>

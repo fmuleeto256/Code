@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        The if and else statements evaluate an expression and then run one
+        block of code if the expression is truthy and another block of code if it's
+        falsy.
+        Forexample:
+        */
+      if (country === "America" || country === "Canada") {
+        temperature = temperature + "F";
+      } else {
+        temperature = ((temperature - 32) * 5) / 9 + "C";
+      }
+      //Sometimes you either want to do something or not do it rather make a choice
+      //between two things.
+      if (waterHeaterIsOff) {
+        turnOnWaterHeater();
+      }
+      /*
+        At other times, you may want to choose between several options. For
+        that case, you can string together if and else statements
+      */
+      if (pet === "cat") {
+        greeting = "Hello, Kitty";
+      } else if (pet === "dog") {
+        greeting = "Hello, doggie";
+      } else if (pet === "pig") {
+        greeting = "Hello, piggy";
+      } else {
+        greeting = "Hi";
+      }
+      //Using the ternary operator
+      const dt = new Date();
+      console.log(dt);
+      hours = get.getHours;
+      let msg;
+      msg = hours < 12 ? "Good morning" : "Welcome";
+      console.log(msg);
+      /*The ternary operator can only be used to switch between two choices only
+      If you need multiple choices, use the if...else or the switch statements. 
+      */
+    </script>
+  </body>
+</html>
