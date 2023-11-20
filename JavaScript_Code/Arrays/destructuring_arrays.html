@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Destructuring in JavaScript is a concise way to extract values from arrays or
+      objects and assign them to variables.
+      When applied to arrays, it's referred to as "array destructuring.
+      */
+      const [variable1, variable2, variable3, variableN] = array;
+
+      //Example.
+      const fruits = ["apple", "banana", "orange"];
+
+      const [firstFruit, secondFruit, thirdFruit] = fruits;
+
+      console.log(firstFruit); // Output: 'apple'
+      console.log(secondFruit); // Output: 'banana'
+      console.log(thirdFruit); // Output: 'orange'
+      /*
+        Key Points:
+        Declaration: The left-hand side of the assignment (const [variable1, variable2, ..., variableN])
+        declares variables that will hold the corresponding values from the array.
+
+        Order Matters: The order of variables on the left corresponds to the order of elements in the
+        array.
+        The first variable gets the value of the first element, the second variable gets the value of
+        the second element, and so on.
+
+        Skipping Elements: You can skip elements you're not interested in by leaving an empty space
+        (const [first, , third] = array;).
+
+        Rest Operator (...): You can use the rest operator to collect the remaining elements into a
+        new array.
+        */
+      const colors = ["red", "green", "blue", "yellow"];
+
+      const [firstColor, ...restColors] = colors;
+
+      console.log(firstColor); // Output: 'red'
+      console.log(restColors); // Output: ['green', 'blue', 'yellow']
+    </script>
+  </body>
+</html>

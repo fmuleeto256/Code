@@ -13,13 +13,195 @@
       //An array in action.
 
       const favoriteCities = ["Rome", "Berlin", "New York", "Paris", "Astoria"];
-
-      //Array indexes start conting at zero(0). Zero-based Indexing.
+      console.log(favoriteCities);
+      //This array has 5 elements, so it is said to have a length of 3.
+      //Array indexes start counting at zero(0). Zero-based Indexing.
       console.log(favoriteCities[0]); //Output: Rome
-      let customerData =
-        "Barb Seibert, Esq.,3739 Sheila Lane,Goldfield,NV,89013";
+
+      //Creating Arrays
+      //Using the array constructor.
+      const myArray = new Array(1, 2, 3, 4, 5, 6, 7, 8, 10);
+      console.log(myArray);
+
+      //Using array literal notation.
+      const myArray2 = [1, 2, 3, 4, 5, 6]; // This is the most common way arrays are made.
+      console.log(myArray2);
+
+      //Using the split function
+      //split()
+      //The split function makes an array out of a string.
+      let customerData = "John, 15, true, single, true";
       const customerDataArray = customerData.split(",");
       console.log(customerDataArray);
+
+      //Accesing Array elements.
+      /*To get the value of a single element, use the
+      array name followed by square brackets containing the index number of
+      the element you want to find out.
+      */
+      const personArray = [
+        "John",
+        "Peter",
+        "Jane",
+        "Andrew",
+        "Sandra",
+        "Mariah",
+      ];
+      console.log(personArray);
+      console.log(personArray[1]); // Here, we access the person at index 1 which is Peter.
+
+      //To know how many elements are in an array.
+      console.log(personArray.length);
+      // The index number of an array is the length-1
+
+      //To loop through an array and add them up, we can use a for loop:
+
+      const numberArray = [5, 7, 9, 5, 4, 3];
+      let total = 0;
+      for (i = 0; i < numberArray.length - 1; i++) {
+        total += numberArray[i];
+      }
+      console.log(`The total is ${total}`);
+
+      //Modifying arrays.
+
+      //Changing the element of an array to another element.
+      //Let's say we are placing 7 with 10, we can say:-
+      numberArray[1] = 10;
+      console.log(numberArray);
+      //We can use the same technique to add an element to an array.
+      numberArray[6] = 15;
+      console.log(numberArray);
+
+      //Deleting elements from an array
+      //1. Change the elements of an array.
+      numberArray.length = 3;
+      console.log(numberArray);
+      //2. Use the delete operator.
+      delete numberArray[2];
+      console.log(numberArray);
+      /*The delete operator doesn't remove an element, it just sets its value to
+      undefined, after using the delete operator, your array becomes a sparse array.
+      A sparse array is an array with undefined elements.
+      */
+
+      /*The most commonly used array functions.
+
+        concat() A new array made up of the current array, joined with other arrays
+        and/or values
+        every() True if every element in the given array satisfies the provided testing
+        function
+        filter() A new array with all the elements of a current array that test true by the
+        given function
+        forEach() Completes the function once for each element in the array
+        includes() Determines whether an array includes a specified value and returns
+        true or false
+        indexOf() Finds the first occurrence of the specified value within the array; returns
+        –1 if the value is not found
+        join() Joins all elements of an array into a string
+        lastIndexOf() Finds the last occurrence of the specified value within the array; returns
+        –1 if the value is not found
+        map() Creates a new array with the result of a provided function on every
+        element in the array
+        pop() Removes the last element in an array
+        push() Adds new items to the end of an array
+        reduce() Reduces the values in an array to a single value by applying a function
+        to them (from left to right)
+        reverse() Reverses the order of elements in an array
+        shift() Removes the first element from an array and returns that element,
+        resulting in a change in length of an array
+        slice() Selects a portion of an array and returns it as a new array
+        Method Return Value
+        some() Returns true if one or more elements satisfy the provided testing
+        function
+        sort() Creates a new array by sorting the elements in an array
+        splice() Returns a new array composed of elements that were added or
+        removed from a given array
+        toString() Converts an array to a string
+        unshift() Returns a new array with a new length by the addition of one or more
+        elements
+      */
+
+      //Let's look at the most common array functions.
+      const ingredients = [
+        "eggs",
+        "milk",
+        "cheese",
+        "garlic",
+        "onion",
+        "kale",
+        "salt",
+        "pepper",
+      ];
+      console.log(ingredients);
+
+      //push():
+      //The push() adds a new item to the end of an array.
+      ingredients.push("royco");
+      console.log(ingredients);
+
+      //pop();
+      //The pop() removes the last element of an array.
+      ingredients.pop();
+      console.log(ingredients);
+      //If we want to do something with the popped item, we can give it a variable.
+      const poppedItem = ingredients.pop();
+      console.log(poppedItem);
+      console.log(ingredients);
+
+      //shift():
+      //shift() removes an element from the beginning of an array
+      ingredients.shift();
+      console.log(ingredients);
+      //If we want to do something with removed item, we can add it in a variable.
+      shiftedItem = ingredients.shift();
+      console.log(shiftedItem);
+
+      //unshift():
+      //This adds a new element to the beginning of an array.
+      ingredients.unshift("milk");
+      console.log(ingredients);
+
+      //slice():
+      /*
+      This selects part of the array and only returns that part
+      It takes two numbers,the starting element's index number 
+      and the ending element's index number.
+      */
+      const slicedIngredients = ingredients.slice(2, 4);
+      console.log(slicedIngredients);
+      console.log(ingredients);
+      //With the slice(), the original array remains unchanged.
+      //Instead, it returns a new array containing the selected elements
+      //based on the specified start and end indices.
+
+      //splice():
+      /*The splice() method in JavaScript is used to change the 
+      /contents of an array by removing or replacing existing elements and/or adding new elements in place.
+      */
+      //array.splice(start, deleteCount, item1, item2, ...);
+
+      /*
+      start: The index at which to start changing the array. If negative, it counts from the end of the array.
+      deleteCount: An integer indicating the number of elements in the array to remove from start.
+      item1, item2, ...: Elements to add to the array, beginning from start.
+      */
+      //Removing elements.
+      const splicedIngredients = ingredients.splice(2, 4);
+      //2 is the start index and 4 is the number of items to be removed.
+      console.log(splicedIngredients);
+      console.log(ingredients);
+
+      //Replacing items
+      console.log(ingredients.splice(0, 1, "coriander"));
+      //Here we remove one item at index 0, and replace it with coriander.
+      console.log(ingredients);
+
+      //Adding Items
+      console.log(ingredients.splice(1, 0, "butter", "royco", "oatmeal"));
+      //Adding items starting from index 1 without removing any item, that's why the second
+      //number is 0
+      console.log(ingredients);
     </script>
   </body>
 </html>

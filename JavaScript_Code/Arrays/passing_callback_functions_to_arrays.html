@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //A callback function is a function you pass to another function.
+      function doMath(value, mathToDo) {
+        let result = mathToDo(value);
+        return result;
+      }
+      /*With this function, the doMath() function can have multiple purposes.
+         For example, if you wanted to use it to calculate the circumference of a
+         circle from its radius, you could do this.
+      */
+      const circumference = doMath(4, function mathToDo(radius) {
+        return 2 * Math.PI * radius;
+      });
+
+      //1. Using the reducer function.
+      //The reduce function is used to accumulate or "reduce" the elements of an array into a single value.
+      let prices = [4.99, 3.98, 54.99];
+      let total = 0;
+      total = prices.reduce(function (previousValue, currentValue) {
+        return previousValue + currentValue;
+      });
+      /*2. Simplifying the reduce function:- In this case, we avoid the need to initialize the total
+            to 0, by specifying an initial value for previousValue
+        by passing it as the second value to the reduce() function.
+      */
+      /*let total = prices.reduce(function((previousValue,currentValue)){
+          return previousValue + currentValue;
+       }, 0);
+       */
+      /* 3. Using the arrow syntax.
+        let total = prices.reduce(
+    (previousValue,currentValue) => previousValue + currentValue,0);
+       */
+
+      //Mapping an array.
+      /*map() lets you modify each element of an array and collect the 
+      results in a new array without changing the original array.
+      Example:
+       */
+      const numbers = [1, 2, 3, 4];
+
+      // Using map with a traditional function to double each number
+      const doubledNumbers = numbers.map(function (number) {
+        return number * 2;
+      });
+      console.log(doubledNumbers);
+      // Output: [2, 4, 6, 8]
+
+      //Using map() with an arrow function.
+      const numbers2 = [1, 2, 3, 4];
+
+      // Using map to double each number
+      const doubledNumbers2 = numbers.map((x) => x * 2);
+
+      console.log(doubledNumbers);
+      // Output: [2, 4, 6, 8]
+
+      //The filter();
+      /*
+       The filter() method applies a test to each element of an array and
+        returns a new array with just the elements that pass the test.
+        In the
+        following example, filter() is used to find only the words that start
+        with the letter a:
+      */
+      const animalNames = [
+        "aardvark",
+        "alligator",
+        "alpaca",
+        "bear",
+        "beaver",
+        "cat",
+        "dog",
+        "elephant",
+      ];
+      const animalsStartingWithA = animalNames.filter((animal) =>
+        animal.startsWith("a")
+      );
+
+      //Destructuring arrays.
+      /*Destructuring in JavaScript is a concise way to extract values from arrays or objects 
+      and assign them to variables. When applied to arrays, it's referred to as "array destructuring.
+      */
+      const fruits = ["apple", "banana", "orange"];
+
+      const [firstFruit, secondFruit, thirdFruit] = fruits;
+
+      console.log(firstFruit); // Output: 'apple'
+      console.log(secondFruit); // Output: 'banana'
+      console.log(thirdFruit); // Output: 'orange'
+      //
+    </script>
+  </body>
+</html>

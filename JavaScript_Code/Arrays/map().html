@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ingredients List</title>
+  </head>
+  <body>
+    <ul id="animals"></ul>
+    <script>
+      const animals = [
+        "goat",
+        "pig",
+        "cow",
+        "dog",
+        "kangaroo",
+        "lion",
+        "leopard",
+      ];
+      /*
+      let listAnimals = animals
+        .map(function (singleAnimal) {
+          return `<li>${singleAnimal}</li>`;
+        })
+        .join("");
+      document.getElementById("animals").innerHTML = listAnimals;
+      */
+      //Using the map () with an arrow function.
+
+      let listAnimals = animals
+        .map((singleAnimal) => `<li>${singleAnimal}</li>`)
+        .join("");
+      document.getElementById("animals").innerHTML = listAnimals;
+    </script>
+  </body>
+</html>

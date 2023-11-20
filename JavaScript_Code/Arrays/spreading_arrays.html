@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        Spreading arrays in JavaScript means taking all the elements from one array and putting them into
+        another array or using them individually in a new context. The spread syntax (...) is used for this,
+        making it easy to work with multiple array elements at once.
+      */
+      const fruits = ["apple", "banana", "orange"];
+      const moreFruits = ["grape", "kiwi"];
+
+      const combinedFruits = [...fruits, ...moreFruits];
+
+      console.log(combinedFruits);
+      // Output: ['apple', 'banana', 'orange', 'grape', 'kiwi']
+
+      /*
+        Spread syntax is often used to pass all values
+        of an array into a function or to copy the values from one array into
+        another:
+      */
+      const firstArray = ["a", "b", "c"];
+      const secondArray = [...firstArray, "d"];
+      console.log(secondArray); // ["a","b","c","d"]
+
+      /*A copy of an array created with the spread syntax is called a shallow copy
+      because it contains just the values from the original array and has no reference
+      to the original array.
+      */
+      const fruits2 = ["apple", "orange", "pineapple", "jackfruit"];
+      const fruits2ShallowCopy = [...fruits2];
+      fruits2ShallowCopy.push("lemon");
+      console.log(fruits2);
+      console.log(fruits2ShallowCopy);
+    </script>
+  </body>
+</html>
