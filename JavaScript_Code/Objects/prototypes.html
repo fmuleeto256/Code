@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        In JavaScript, each object has a prototype, which is like a blueprint or template.
+         This prototype defines the object's default properties and methods. When you create
+          a new object, it inherits properties and methods from its prototype.
+        */
+      //1.Prototype from Constructor Function:
+      /*
+      When you create an object using a constructor function, the new object's prototype is 
+      set to the constructor function's prototype.
+      */
+      // Constructor function
+      function Vehicle(speed) {
+        this.speed = speed;
+      }
+
+      // Create an object using the constructor
+      const car = new Vehicle(60);
+
+      // The prototype of the 'car' object is 'Vehicle.prototype'
+      console.log(Object.getPrototypeOf(car) === Vehicle.prototype); // Outputs: true
+
+      //2. Prototype from Another Object:
+      /*
+      When you create an object using another object as a prototype, 
+      the new object inherits properties and methods from that prototype object.
+      */
+      // Prototype object
+      const vehiclePrototype = {
+        move: function () {
+          return `Moving at ${this.speed} km/h`;
+        },
+      };
+
+      // Create an object using 'vehiclePrototype' as the prototype
+      const bicycle = Object.create(vehiclePrototype);
+      bicycle.speed = 20;
+
+      // 'bicycle' inherits the 'move' method from 'vehiclePrototype'
+      console.log(bicycle.move()); // Outputs: Moving at 20 km/h
+
+      //3. Objects Access Properties of Their Parents:
+      /*
+      Objects can access properties and methods from their prototype (parent). 
+      If a property is not found in the object itself, JavaScript looks up the prototype chain.
+      */
+      // Adding a property to the 'vehiclePrototype'
+      vehiclePrototype.numberOfWheels = 4;
+
+      // Accessing the 'numberOfWheels' property from the 'bicycle' object
+      console.log(bicycle.numberOfWheels); // Outputs: 4
+
+      //4. Using Own Property vs. Prototype Property:
+      /*
+      If an object has its own property with the same name as a property in its prototype,
+       it uses its own property.
+      */
+      // Adding an 'engine' property to the 'bicycle' object
+      bicycle.engine = "manual";
+
+      // 'bicycle' has its own 'engine' property, not using the prototype's 'engine'
+      console.log(bicycle.engine); // Outputs: manual
+    </script>
+  </body>
+</html>

@@ -7,12 +7,12 @@
   </head>
   <body>
     <script>
-      /* An object is a collection of key-value pairs, where each key is a string (or symbol) that 
-      acts as an identifier for a value. Objects are containers for related data.For example, an 
-      object called customerInfo might
-      contain a name and an address and various other values related to a
-      particular customer of a business.
-      */
+      /* An object is a collection of key-value pairs, where each key is a string (or symbol) that
+            acts as an identifier for a value. Objects are containers for related data.For example, an
+            object called customerInfo might
+            contain a name and an address and various other values related to a
+            particular customer of a business.
+            */
       //An object in action.
 
       const customerInfo = {
@@ -41,7 +41,7 @@
       console.log(customerInfo);
 
       //Functions within objects are called methods.
-      let person = {
+      let person1 = {
         name: "John",
         greet: function () {
           console.log(`Hello, ${this.name}!`); // (this) refers to the object person.
@@ -49,9 +49,110 @@
       };
       person.greet(); // Output: Hello, John!
 
-      //Using the bracket notation. // The bracket notation is preffered for properties
+      //Using the bracket notation.
+      //We can use the dot notation to access values of nested objects (objects within objects)
+      const myLocation = {
+        city: {
+          id: 2643743,
+          name: "London",
+          coord: {
+            lon: -0.1258, // This is an object with other objects inside (nested objects)
+            lat: 51.5085,
+          },
+          country: "GB",
+          population: 9820000,
+          timezone: 3600,
+        },
+      };
+      //To get the latitude, we can use this line.
+      console.log(myLocation.city.coord.lat);
+
+      // The bracket notation is preffered for properties
       //that would cause syntax errors with the dot notation.
+      //For example:
+      var person = {
+        "full name": "John Doe",
+        "123property": "Some value", // Here, properties have special characters, so we can't access them using the dot notation
+      };
+
+      console.log(person["full name"]); // Outputs: John Doe
+      console.log(person["123property"]); // Outputs: Some value
+
+      //
+      //We can also use the bracket notation if we want to get multiples properties of an object
+      //using the same statement.
+      //Printing out the properties an object.
+
+      for (const property in person) {
+        console.log(`${property}: ${person[property]}`);
+      }
+      //Creating objects.
+      //1. Using the object literal
+      //The simplest way to create an object is by using object literals.
+      var person = {
+        name: "John",
+        age: 30,
+        sayHello: function () {
+          console.log("Hello, my name is " + this.name);
+        },
+      };
+
+      //2. Constructor Functions:
+      //Constructor functions are used to create multiple instances of objects with similar properties.
+      function Person(name, age) {
+        this.name = name;
+        this.age = age;
+      }
+
+      var person = new Person("John", 30);
+
+      //3. Object.create:
+      //The Object.create method creates a new object, using an existing object as the prototype.
+      var personPrototype = {
+        sayHello: function () {
+          console.log("Hello, my name is " + this.name);
+        },
+      };
+
+      var person = Object.create(personPrototype);
+      person.name = "John";
+      person.age = 30;
+
+      //4. Class (ES6 and later):
+      //ES6 introduced the class syntax for creating constructor functions and classes.
+      class Person {
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+
+        sayHello() {
+          console.log("Hello, my name is " + this.name);
+        }
+      }
+
+      var person = new Person("John", 30);
+
+      //5. Factory Function:
+      //A factory function is a function that returns an object.
+
+      function createPerson(name, age) {
+        return {
+          name: name,
+          age: age,
+          sayHello: function () {
+            console.log("Hello, my name is " + this.name);
+          },
+        };
+      }
+
+      var person = createPerson("John", 30);
       console.log(person);
+
+      //Deleting an object property.
+      //You can delete a property only if it’s an own property of an object.
+      delete person.age;
+      //
     </script>
   </body>
 </html>

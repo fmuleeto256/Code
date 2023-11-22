@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /* 1. Objects and Reference vs. Value:
+      1.Copying Objects:
+      When you make a copy of an object using the assignment operator (=) or by passing
+      it into a function, what gets copied is the reference to the object in memory, not
+       the values inside the object.
+      Unlike primitive data types (strings, numbers), which are copied by value, objects
+      are copied by reference.
+
+      */
+
+      /* 2. Object Comparison:
+      Triple Equals Operator (===):
+
+      When comparing objects using the === operator, it compares the references, not the values 
+      inside the objects. Two objects with identical properties and values are not considered 
+      equal because they are different objects in memory.
+      */
+      const firstObject = { prop1: "test", prop2: "test2" };
+      const secondObject = { prop1: "test", prop2: "test2" };
+
+      console.log(firstObject === secondObject); // Outputs: false
+
+      /* 3. Copying Objects by Reference:
+       When you assign one object to another variable (thirdObject = secondObject), you are not 
+       creating a new object but creating a reference to the same object.
+      */
+      const thirdObject = secondObject;
+      thirdObject.prop1 = "orange";
+      console.log(secondObject.prop1 === thirdObject.prop1); // Outputs: true
+
+      /*4. Reference Nature of Objects:
+       Changes made to an object through one reference affect the other references to the same object.
+      */
+      thirdObject.prop3 = "claw hammer";
+      console.log(secondObject.prop3); // Outputs: claw hammer
+
+      /*5. Shallow Copy of Objects:
+        To create a new object that doesn't affect the original, you need to make a shallow copy.
+        The spread operator (...) can be used to create a shallow copy of an object.
+      */
+      const fourthObject = { ...secondObject };
+      console.log(fourthObject === secondObject); // Outputs: false
+    </script>
+  </body>
+</html>
