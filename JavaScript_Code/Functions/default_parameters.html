@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Default Parameters:
+
+    When you define a function with parameters, you can set default values for those parameters.
+     If a function is called without providing a value for a parameter, the default value will be
+      used instead.
+    Syntax:
+    
+    Default values are set using the assignment (=) operator inside the function's parameter list.
+    Example: function greetUser(firstName='Valued', lastName='Customer') { ... }
+    Example Function:
+    
+    Here's an example function named greetUser that takes two parameters, firstName and lastName, 
+    with default values:
+    */
+      function greetUser(firstName = "Valued", lastName = "Customer") {
+        alert(`Hello, ${firstName} ${lastName}`); //Output: Hello Valued Customer
+      }
+      /*
+      If the function is called without providing values for firstName and lastName, the default values
+       ('Valued' and 'Customer') will be used:
+      */
+      //If values are provided, they will override the default values:
+      greetUser("John", "Doe"); // Alerts: "Hello, John Doe"
+    </script>
+  </body>
+</html>

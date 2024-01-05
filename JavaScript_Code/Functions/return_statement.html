@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*The return statement is used in JavaScript to specify the value that the function will
+        return when it is called.
+        Its basic syntax is as follows:
+        */
+      return expression;
+
+      /*When a return statement is faced in a function, it immediately stops the execution of the function
+      and sends the specified value back to the caller.
+      Forexample:
+      */
+      function addNumbers(a, b) {
+        return a + b;
+      }
+
+      const result = addNumbers(3, 4); // result will be 7
+      console.log(result);
+
+      /*Returning early: 
+      You can use a return statement to exit a function prematurely.
+      This is often used in conditional statements.
+       */
+      function checkValue(value) {
+        if (value < 0) {
+          return "Negative value"; // Returns early if value is negative
+        }
+        return `${value} is positive`;
+      }
+      const result2 = checkValue(-3);
+      console.log(result);
+
+      /*Returning objects or arrays:
+      Functions can return more complex data types like arrays and objects.
+       */
+      function createPerson(name, age) {
+        return { name, age };
+      }
+      const person = createPerson("John", age);
+      console.log(person);
+
+      /*Multiple return statements: 
+      A function can have very many return statements,
+      but only one will be executed. The first one to be encountered.
+      */
+      function getDiscount(totalAmount) {
+        if (totalAmount > 100) {
+          return 0.1; //10% discount on large purchases
+        }
+        return 0; // No discount on small purchases.
+      }
+      const result3 = getDiscount(500);
+      console.log(result);
+    </script>
+  </body>
+</html>

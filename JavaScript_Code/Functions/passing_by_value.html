@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Passing by value.
+      /*
+      Passing by Value:
+      What happens: When you pass a value (like a number or a string) to a function, a copy of 
+      that value is sent to the function.
+      Effect: Any changes made to the value inside the function do not affect the original value
+       outside the function.
+      Example: If you have a cookie (value) and give a friend a piece, you each have your own independent
+       pieces. Changing your piece doesn't change your friend's piece.
+      */
+      // Declare the variable at the top
+      let cookieJar = 5;
+
+      // Call the function with the number of cookies before it's defined
+      eatCookie(cookieJar);
+
+      // Function that takes a number (passing by value)
+      function eatCookie(cookies) {
+        cookies = cookies - 1;  // You ate one cookie!
+        console.log("Inside the function: Cookies eaten =", cookies);
+      }
+
+      // Outside the function, the original number is unchanged
+      console.log("Outside the function: Cookies in the jar =", cookieJar);
+    </script>
+  </body>
+</html>

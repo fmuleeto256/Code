@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*Callback functions.
+        Callback functions are functions that can be passed to another function as arguments.
+        The function you pass a callback function to is called an outer function.
+        Callback functions are used for adding functionality to functions or for
+        telling the outer function what to do when it completes its work.
+        */
+      function cookFood(name) {
+        return `I am cooking ${name}`;
+      }
+      function makeMeal(callback) {
+        return callback("Matooke");
+      }
+      console.log(makeMeal(cookFood));
+
+      //Let's look at another example with a prompt for a user to mention his name.
+
+      function greetInSpanish(name) {
+        return `Hola, ${name}`;
+      }
+      function getUserName(callback) {
+        let firstName = prompt("Enter your first name");
+        return callback(firstName);
+      }
+      getUserName(greetInSpanish);
+    </script>
+  </body>
+</html>

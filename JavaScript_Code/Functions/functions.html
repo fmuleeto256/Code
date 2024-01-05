@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+      A function is a group of statements that perform a task. In other words, a
+      function is like a smaller program inside your program.
+      JavaScript has many built-in functions, but you can also create your own
+      JavaScript functions. Here's a simple function to add two numbers
+      together:
+      Here is a function to add two numbers together.
+      */
+      function addNumbers(num1, num2) {
+        return num1 + num2;
+      }
+      const sum = addNumbers(4, 8);
+      console.log(sum); // Output: 12
+      //Types of functions.
+      //Top-level functions
+      /*These are functions that are not part of an object.
+       You can build your own top-level functions
+       and JavaScript has a handful of them for you.
+
+      Boolean() Converts a non-Boolean value to Boolean
+      Number() Converts a non-number value to a number
+      String() Converts a non-string value to a string
+      eval() Runs JavaScript code passed to it as a string
+      uneval() Creates a string from source code passed to it
+      isFinite() Determines whether the value passed to it is a finite number
+      isNaN() Determines whether a value passed to it is NaN
+      parseFloat() Converts a string to a floating-point number
+      parseInt() Converts a string to an integer
+      decodeURI() Decodes a string that has been encoded by encodeURI()
+      decodeURIComponent() Decodes a string that has been encoded using
+      encodeURIComponent()
+      encodeURI() Replaces certain characters (for example, spaces, quotes, and
+      slashes) in a string with escape sequences to create a valid
+      Uniform Resource Identifier, which are the addresses used to
+      locate web pages and other resources on the web
+      encodeURIComponent() Does the same thing as encodeURI() (see the preceding entry)
+      but encodes the whole string, whereas encodeURI() ignores the
+      protocol prefix (such as http://) and the domain name      
+       */
+      //Methods of built-in objects.
+      /*
+    1. Built-in Functions:
+
+    These are pre-defined functions that come with JavaScript itself.
+    There are two main types of built-in functions:
+    Top-level functions: These are independent functions not attached to any object. JavaScript provides several of these, like Boolean(), String(), and parseInt(). You can use them anywhere in your program.
+    Methods of built-in objects: Every object in JavaScript (like strings, numbers, and arrays) has built-in methods specific to its type. For example, strings have methods like split() and trim(), while numbers have methods like toFixed() and isInteger(). These methods are accessed using the object name followed by a dot and the method name (e.g., myString.split()).
+    2. Custom Functions:
+
+    These are functions you define yourself to perform specific tasks or encapsulate reusable logic. You can control their behavior and use them multiple times in your code.
+    Understanding Top-Level Functions:
+
+    Think of top-level functions as independent tools ready for use anywhere in your program. They are not part of any particular object and can be called directly. Table 8-1 in the excerpt lists some built-in top-level functions like Number(), parseInt(), and isNaN(). Each function has a specific purpose:
+
+    Number(): Converts a non-number value (string, boolean) to a number.
+    parseInt(): Converts a string containing a number to an integer.
+    isNaN(): Checks if a value is "not a number" (NaN).
+    You can call these functions like any other function, directly with arguments if needed:
+    */
+
+      JavaScript;
+      const stringNumber = "123";
+      const convertedNumber = Number(stringNumber); // convertedNumber will be 123
+
+      const userInput = "apple";
+      const isNumber = parseInt(userInput); // isNumber will be NaN
+      /*
+    Methods of Built-in Objects:
+
+    Every object in JavaScript, like strings, numbers, arrays, and even objects you create yourself, 
+    comes with built-in methods specific to its type. These methods allow you to manipulate and interact with the object's data or behavior.
+
+    For example, strings have methods for splitting, searching, and modifying text:
+
+    */
+      const greeting = "Hello, World!";
+      const splitWords = greeting.split(", "); // splitWords will be an array ["Hello", "World!"]
+      /*
+    Similarly, numbers have methods for checking even/odd, rounding decimals, and converting to strings:
+    */
+      JavaScript;
+      const pi = 3.14159;
+      const roundedPi = pi.toFixed(2); // roundedPi will be "3.14"
+      /*
+    Accessing Methods:
+
+    You can access methods by adding a dot (.) after the object name followed by the method name and optional arguments in parentheses:
+    */
+      JavaScript;
+      myString.toLowerCase(); // converts the string to lowercase
+      myNumber.isInteger(); // checks if the number is an integer
+      /*
+    Static vs. Instance Methods:
+
+    Not all methods are accessed the same way. Some methods operate on the object itself and are called instance methods (like myString.toUpperCase()). Others act as utilities provided by the object's constructor (like Number.parseFloat()). These are called static methods.
+
+    Static methods don't operate on individual object instances but rather perform general tasks associated with the object type. You call them directly using the object constructor name followed by the method name and arguments, not on a specific object variable:
+    */
+      JavaScript;
+      Number.parseInt("123"); // converts the string to an integer (like parseInt())
+      Array.isArray([]); // checks if the value is an array (true)
+      /*
+    Remember:
+
+    Both top-level functions and methods of built-in objects offer ways to perform specific tasks in JavaScript.
+    Top-level functions are independent tools, while object methods are specific to the object type.
+    Use the appropriate method call syntax (object name + dot + method) for instance methods and object constructor name + method for static methods.
+    */
+      //Writing Functions
+      /*A function declaration is made of a function keyword and the name of the function
+      It also contains parentheses which may contain parameters
+      and curly brackets surrounding one or more statements.
+       */
+      function cookFood(food) {
+        console.log(`I am going to cook ${food}`);
+      }
+      result = cookFood("Matooke");
+      console.log(result); // This returns undefined because there is no return value in the function.
+      //Naming functions.
+      /*
+      Functions should be named using a verb because they do something. Here is how we can write them
+      
+      */
+      convertToMp3();
+      getCurrentDate();
+      calculateTotal();
+      /*Passing arguments:
+      The names inside the parentheses are called parameters. A function can have as many
+      parameters as possible. We just separate them by a comma.
+      When you call a function, you put the values for the parameters, those values are called arguments. 
+      */
+      function addNumbers(num1, num2) /*num1 and num2 are parameters*/ {
+        return num1 + num2;
+      }
+      const result = addNumbers(3, 4); // 3 and 4 are arguments.
+      console.log(result);
+
+      /* Using rest parameters.            
+      A rest parameter in JavaScript allows a function to accept an indefinite number of arguments as an array. 
+      It enables you to represent an unspecified number of arguments as an array, making it more flexible to handle
+       varying numbers of inputs.
+       The rest parameter is denoted by three dots (...), followed by the name of the parameter. It collects all the
+        remaining arguments into an array.
+       */
+      function exampleFunction(firstArg, ...restArgs) {
+        console.log("First argument:", firstArg);
+        console.log("Rest arguments:", restArgs);
+      }
+      exampleFunction(1, 2, 3, 4, 5);
+      /*
+      Using the arguments object:
+      Another way to access any number of functions passed a function is to use the
+      argument object.
+      */
+      function exampleFunction() {
+        console.log(arguments);
+      }
+      exampleFunction(1, 2, 3); // Outputs: { '0': 1, '1': 2, '2': 3, length: 3 }
+
+      /*Passing functions as arguments.
+      
+      */
+    </script>
+  </body>
+</html>

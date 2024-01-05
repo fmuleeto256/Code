@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //Passing by reference.
+      /*
+        What happens: When you pass an object (like an array or an object) to a function, 
+        you're actually passing a reference (a way to find it in memory) to the function.
+        Effect: Changes made to the object inside the function affect the original object 
+        outside the function.
+        Example: If you have a recipe book (object) and share it with a friend, both of you
+        can make changes to the recipes. If your friend adds a new recipe, it's also in your book because you both are using the same reference (book).
+      */
+      // Declare and initialize the variable at the top
+      let myCookieJar = {
+        total: 5,
+      };
+
+      // Call the function with the cookie jar before it's defined
+      addCookie(myCookieJar);
+
+      // Function that takes a cookie jar (passing by reference) with hoisting
+      function addCookie(cookies) {
+        cookies.total = cookies.total + 1; // You added a cookie to the jar!
+        console.log(
+          "Inside the function: Total cookies in the jar =",
+          cookies.total
+        );
+      }
+
+      // Outside the function, the original cookie jar is updated
+      console.log(
+        "Outside the function: Total cookies in my jar =",
+        myCookieJar.total
+      );
+    </script>
+  </body>
+</html>

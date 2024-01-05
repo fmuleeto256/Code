@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Local Variables</title>
+  </head>
+  <body>
+    <h1>JavaScript Functions</h1>
+    <p>Outside myFunction(), carName is undefined</p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <script>
+      /*
+        Local Variables:
+        Variables declared within a JavaScript function, become LOCAL to the function.
+
+        Local variables can only be accessed from within the function.
+     */
+      function myFunction() {
+        let carName = "Volvo";
+        let text = `Inside: ${typeof carName} ${carName}`;
+        document.getElementById("demo2").innerHTML = text;
+      }
+
+      myFunction();
+      let text = `Outside: ${typeof carName}`;
+      document.getElementById("demo1").innerHTML = text;
+      /*
+      Note: Since local variables are only recognized inside their functions,
+            variables with the same name can be used in different functions.
+      Note2: Local variables are created when a function starts, and deleted when
+             the function is completed.
+      */
+    </script>
+  </body>
+</html>
