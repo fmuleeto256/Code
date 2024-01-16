@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //What are nested functions?
+      /*
+        They are functions defined inside other functions. 
+        Think of them as "sub-functions" that help organize 
+        code and perform specific tasks within a larger function.
+      */
+      function outer() {
+        console.log("outer");
+        function inner() {
+          // This is a nested function.
+          console.log("inner");
+        }
+        inner();
+      }
+      outer();
+
+      /*
+      Nested functions have access to variables and parameters from the
+      outer function (their "parent"), even after the outer function has
+      finished executing. This creates a closure.
+      The outer function, however, cannot directly access variables from the nested
+      function.
+      Nested functions can only be called from within the outer function or returned 
+      as values to be used elsewhere.
+      */
+    </script>
+  </body>
+</html>

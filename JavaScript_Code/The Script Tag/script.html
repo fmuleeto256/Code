@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Before the script</p>
+    <p class="demo"></p>
+    <script>
+      // This is a script element.
+      /*
+       JavaScript programs can be inserted almost anywhere into an HTML document
+       using the <script> tag.
+       */
+
+      document.querySelector(".demo").innerHTML = "This is the script";
+
+      /*
+      If we have a lot of JavaScript, we can put it into a separate file.
+      We can also link more than one file.  
+      */
+
+      /*
+      If 'src' is set, the content inside is ignored. A single 'script tag'
+      can't have both the src and the content inside. 
+      */
+      /*
+     We must choose either an external <script src="…"> or a regular <script> with code.
+     */
+    </script>
+    <script src="alert.js"></script>
+    <p>After the script</p>
+  </body>
+</html>

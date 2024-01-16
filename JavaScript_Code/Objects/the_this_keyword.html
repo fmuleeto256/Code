@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>The JavaScript <i>this</i> keyword</h1>
+    <p>In this example, <b>this</b> refers to the <b>person</b> object</p>
+    <p>Because <b>fullName</b> is a method of the <b>person</b> object</p>
+    <p id="demo"></p>
+    <script>
+      /*
+        In JavaScript, the this keyword refers to an object.
+        The this keyword refers to different objects depending
+        on how it is used.
+    Note: In an object method, this refers to the object.
+        Alone, this refers to the global object.
+        In a function, this refers to the global object.
+        In a function, in strict mode, this is undefined.
+        In an event, this refers to the element that received the event.
+        Methods like call(), apply(), and bind() can refer this to any object.
+    Note: this is not a variable, it is a keyword, you can't change the variable of this.
+    */
+      // this in a Method.
+      const person = {
+        firstName: "Kyeyune",
+        secondName: "John",
+        age: 30,
+        sex: "Male",
+        fullName: function () {
+          return `${this.firstName} ${this.secondName}`;
+        },
+      };
+      document.getElementById("demo").innerHTML = person.fullName();
+      //In this example, this refers to ther person object.
+
+      //this Alone.
+      /*When used alone, this refers to the global object because this is running
+      in the global scope.
+      In a browser window, the global object is the [window object]
+      */
+      let x =
+        this; /* Here, this refers to the global object because it is running
+     in the global scope.*/
+
+      //Note: In strict mode when used alone, this also refers to the global project.
+      ("use strict");
+      let z = this;
+
+      //this in a Function.
+
+      /*
+    In a function, this represents the global object.
+    */
+      function myFunction() {
+        return this; // this represents a global object.
+      }
+
+      //this in a strict function.
+      /*
+      In a strict function, this is undefined. 
+      */
+      ("use strict");
+      function myFunction() {
+        return this; // Here, this is undefined.
+      }
+
+      //this in event handlers.
+      /*
+      In HTML event handlers, this refers to the HTML element that received the event:
+      */
+      <button onclick="this.style.display='none'">Click to Remove Me!</button>;
+
+      //this in call(), apply(), and bind().
+      
+    </script>
+  </body>
+</html>

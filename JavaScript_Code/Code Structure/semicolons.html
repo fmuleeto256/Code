@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comments</title>
+  </head>
+  <body>
+    <script>
+      // 1. A comment can be ommited in most times when a line break exists between statements
+
+      //2. In most cases, a new line implies a semi-colon, but not always
+
+      //3. JavaScript does not assume a semicolon before square brackets [...]
+      alert("Hello");
+      [1, 2].forEach(alert);
+      /*JavaScript sees the first statement as the statement below if there is
+      no semicolon to separate them. 
+      */
+      alert("Hello")[(1, 2)].forEach(alert);
+    </script>
+  </body>
+</html>

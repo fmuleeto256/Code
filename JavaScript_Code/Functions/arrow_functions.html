@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+    Arrow functions, introduced in ECMAScript 6 (ES6), are a more concise way to write
+     functions in JavaScript. They provide a shorter syntax compared to traditional 
+     function expressions and come with a few key characteristics:
+    */
+      const addNumbers = function (a, b) {
+        return a + b;
+      }; // This is a function expression.
+      console.log(addNumbers(7, 9));
+
+      //We can make arrow functions from function expressions like this:-
+
+      const addNumbers2 = (a, b) => {
+        return a + b; // This an arrow function that we have made from a function expression.
+      };
+      console.log(addNumbers(7, 9));
+      /*
+      Arrow functions with a single expression have an implicit return.
+       If the function body contains only one statement, that statement's 
+       result is automatically returned.
+      */
+     //We can simplify the above arrow function like this:-
+
+     const addNumbers3 = (a, b) => a + b;
+      console.log(addNumbers(7, 9));
+      //That's an arrow function that has one expression, so we can write it like that. 
+    </script>
+  </body>
+</html>

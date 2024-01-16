@@ -1,0 +1,1 @@
+alert("I love you") // This file has been linked to 'script.html'
