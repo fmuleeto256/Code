@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Assignment Operator</title>
+  </head>
+  <body>
+    <script>
+      /*The assignment operator is listed in the precedence table with a very low precedence.
+        That’s why, when we assign a variable, like x = 2 * 2 + 1, the calculations are done first 
+        and then the = is evaluated, storing the result in x.
+        */
+      //Assignment returns a value.
+
+      //All operators in JavaScript returns values. Even the assignment operator.
+
+      let a = 1;
+      let b = 2;
+      let c = 3 - (a = b + 1);
+      alert(a); // This shows that the assignment operator returns a value.
+      alert(b);
+
+      /*Assignments can also be assigned. 
+
+
+       */
+
+      let x, y, z;
+
+      x = y = z = 2 + 2;
+
+      alert(x); // 4
+      alert(y); // 4
+      alert(z); // 4
+
+      /*
+      Chained assignments evaluate from right to left. 
+      First, the rightmost expression 2 + 2 is evaluated and then assigned to the variables
+      on the left: x, y and z. At the end, all the variables share a single value.
+      */
+      //But for code readability, it is advisable to split the code into a few lines.
+
+      x = 2 + 2;
+      y = x;
+      z = x;
+    </script>
+  </body>
+</html>

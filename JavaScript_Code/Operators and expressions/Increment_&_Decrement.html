@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Basic Operators- Math/Increment_&_Decrement.html</title>
+  </head>
+  <body>
+    <script>
+      /*
+        Increasing or decreasing a number by one is among the most common numerical
+         operations.
+         1.Increment ++ increases a variable by 1
+        */
+      let counter = 2;
+      counter++; // works the same as counter = counter + 1, but is shorter
+      alert(counter); // 3
+
+      //Decrement -- decreases a variable by 1
+
+      let counter2 = 2;
+      counter2--; // works the same as counter2 = counter2 - 1, but is shorter
+      alert(counter2); // 1
+
+      /*
+      Note: Increment/decrement can only be applied to variables. 
+      Trying to use it on a value like 5++ will give an error.
+      */
+
+      /* The opertors ++ can be applied before of after a variable. 
+
+      1. Before a variable(Prefix form). ++counter
+
+       This returns the new value.
+      */
+      let counter3 = 1;
+      let a = ++counter3; // Using prefix.
+
+      alert(a); // 2
+
+      /*
+      2. After a variable(Postfix form). counter++
+
+      This returns the old value before the increment.
+      */
+
+      /*
+      Note: If the result of increment/decrement is not used, 
+      there is no difference in which form to use:
+      
+      1.If we’d like to increase a value and immediately use the
+       result of the operator, we need the prefix form:
+      */
+      let counter4 = 0;
+      alert(++counter4); // 1
+
+      /*
+      2.If we’d like to increment a value but use its previous value, 
+      we need the postfix form.
+      */
+      let counter5 = 0;
+      alert(counter5++); // 0
+
+      /*
+      Increment and Decrement can be used inside expressions as well.
+
+      Forexample:
+      */
+      let counter6 = 1;
+      alert(2 * ++counter6); //4
+
+      //However, to make code readable, we advise that a style of one-line, one action
+
+      let counter7 = 1;
+      ++counter7;
+      let result = 2 * counter7;
+      alert(result);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        In JavaScript, the confirm function is another method for interacting 
+        with users through a dialog box. The confirm function displays a dialog box
+         with a message and OK and Cancel buttons. It's commonly used to get a simple 
+         "yes" or "no" response from the user.
+        */
+      let userConfirmed = confirm("Do you want to proceed?");
+
+      if (userConfirmed) {
+        alert("You chose to proceed!");
+      } else {
+        alert("You chose to cancel.");
+      }
+
+      /*
+      In this example, the confirm function displays a dialog box with the message 
+      "Do you want to proceed?" and OK/Cancel buttons. The user's choice is then 
+      stored in the userConfirmed variable, and the code proceeds accordingly.
+      */
+
+      /*
+      It's worth noting that the confirm function returns a Boolean value 
+      (true if the user clicks OK, false if the user clicks Cancel), 
+      and this value is commonly used in conditional statements to determine
+       the flow of the program.
+      */
+    </script>
+  </body>
+</html>

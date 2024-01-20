@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numeric Conversion Unary +</title>
+  </head>
+  <body>
+    <script>
+      /*The plus + exists in two forms. 
+        1. The binary form
+        2. And the unary form. 
+        The unary operator + when applied to a single value doesn't do anything to numbers.
+        But if the operand is not a number, the unary operator + converts it into a number.
+        
+        No effect on numbers:
+        */
+      let x = -1;
+      alert(+x); // -1 ( The number is unchanged)
+
+      //Converts non-numbers.
+
+      alert(+true); // 1
+      alert(+false); // 0
+      alert(+""); // 0
+
+      /*
+        It actually does the same thing as Number(...), but is shorter.
+
+        The need to convert strings to numbers arises very often. 
+        For example, if we are getting values from HTML form fields, 
+        they are usually strings. What if we want to sum them?
+
+        The binary plus would add them as strings:
+      */
+
+      let apples = "2";
+      let oranges = "3";
+
+      alert(apples + oranges); // "23", the binary plus concatenates strings
+
+      //If we want to treat them as numbers, we need to convert and then sum them:
+
+      // both values converted to numbers before the binary plus
+      alert(+apples + +oranges); // 5
+
+      // the longer variant
+      // alert( Number(apples) + Number(oranges) ); // 5
+
+      /*
+      From a mathematician’s standpoint, the abundance of pluses may seem strange. 
+      But from a programmer’s standpoint, there’s nothing special: 
+      unary pluses are applied first, they convert strings to numbers, 
+      and then the binary plus sums them up.
+      */
+    </script>
+  </body>
+</html>

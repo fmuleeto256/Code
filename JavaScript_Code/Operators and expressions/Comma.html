@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /*
+        The comma operator allows us to evaluate several expressions, 
+        dividing them with a comma ,. 
+        Each of them is evaluated but only the result of the last one is returned.
+        */
+      let a = (1 + 2, 3 + 4);
+
+      alert(a); // 7 (the result of 3 + 4)
+
+      /*
+      Here, the first expression 1 + 2 is evaluated and its result is thrown away. 
+      Then, 3 + 4 is evaluated and returned as the result.
+
+      Note: Comma has a very low precedence than the assignment operator, 
+      so we should always put it in brackets.
+      */
+      //We usually use comma to use several expressions in one line.
+      //For example:
+
+      let((x = 5), (y = 10));
+    </script>
+  </body>
+</html>

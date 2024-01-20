@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prompt</title>
+  </head>
+  <body>
+    <script>
+      /*The prompt function:
+
+     In JavaScript, the prompt function is used to interact with the user by displaying a dialog box
+      that prompts them to enter some input. The prompt function takes two parameters:
+
+      1.The message: This is a string that will be displayed as a message in the dialog box, 
+      instructing the user on what input is expected.
+
+      2.The default value (optional): This is also a string that will be pre-filled in
+       the input field of the dialog box, providing a default value that the user can
+        either accept or modify.
+
+      The prompt function in action.
+     */
+
+      let userInput = prompt("Please enter your name:", "John Doe");
+
+      // Check if the user entered a value
+      if (userInput !== null) {
+        alert("Hello, " + userInput + "!");
+      } else {
+        alert("You canceled the prompt.");
+      }
+    </script>
+  </body>
+</html>

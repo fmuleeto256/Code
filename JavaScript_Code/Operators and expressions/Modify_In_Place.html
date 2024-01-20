@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modify In Place</title>
+  </head>
+  <body>
+    <script>
+      /*
+        We often need to apply an operator to a variable and store the new result 
+        in that same variable.
+        */
+      let n = 2;
+      n = n + 5;
+      n = n * 2;
+
+      //This notation can be shortened using the operators += and *=
+
+      n += 5; // now n = 7 (same as n = n + 5)
+      n *= 2; // now n = 14 (same as n = n * 2)
+
+      alert(n); // 14
+    </script>
+  </body>
+</html>

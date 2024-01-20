@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>String Conversions</title>
+  </head>
+  <body>
+    <script>
+      /*
+    1. Most of the time, operators and functions automatically convert the values given to
+    the them to the right type.
+    2. For example: alert() automatically converts any value to a string to show it.
+    3. Mathematicals operations also convert values to numbers.
+    \
+    */
+
+      /*String conversion:
+   This happens when we need the string form of a value.
+   We can call the String(value) function to convert a value to a string.
+   */
+      let value = true;
+      alert(typeof value); // boolean
+
+      value = String(value); // now value is a string "true"
+      alert(typeof value); // string
+    </script>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numeric Conversions</title>
+  </head>
+  <body>
+    <script>
+      /*
+        Numeric conversion in mathematical functions and expressions happens automatically.
+        For example, when division / is applied to non-numbers:
+        */
+      alert("6" / "2"); // 3, strings are converted to numbers
+
+      //We can use the Number(value) function to explicitly convert a value to a number:
+      let str = "123";
+      alert(typeof str); // string
+
+      let num = Number(str); // becomes a number 123
+
+      alert(typeof num); // number
+    </script>
+  </body>
+</html>
