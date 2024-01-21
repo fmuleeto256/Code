@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        To see whether a string is greater than the other, JS uses the dictionary order.
+        Strings are compared letter by letter. 
+        For example:
+        */
+       alert("A" > "B"); // "A" is not greater than "B" // False
+       alert("Fred" > "John"); //J comes before F //False.
+       alert("Glow" > "Glee");  // In this case, the first two letters of each word are 
+       //the same, so, we move on to the 3rd letters. O is greater than e, so Glow is greater.
+
+       /*Note: A letter that comes last in the alphabet is greater than a letter that comes first.
+       */
+      
+       /*Note: The comparison of strings looks like the same as that of a dictionary, but
+       it is not exactly the same.
+        Uppercase letter "A" and lowercase letter "a" are not exactly the same.
+        Lowercase letter "a" has a higher index in the JS enconding table(unicode), so
+        it is greater than uppercase letter "A".
+
+       */
+    </script>
+</body>
+</html>

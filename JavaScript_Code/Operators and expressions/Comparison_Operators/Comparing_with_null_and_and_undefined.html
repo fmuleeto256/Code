@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        There is a weird behavior when null and undefined are compared to other values.
+        When using a strict comaprison operator ===, these values are different because
+        each of thme is of a different type.
+        */
+       alert(null === undefined); // false
+
+       /*Using a non-strict equality operator ==, these two equal each other.
+       */
+      alert (null == undefined); //true
+
+      /* For other comparisons, such as less/greater than < >, less or equal to <=
+      and greater or equal to >=, null and undefined are converted to numbers. 
+      Null becomes 0 while undefined becomes NaN.
+
+      For ==, null and undefined are not converted numbers. 
+      */
+
+      //null vs 0
+
+      alert (null > 0) // false. becomes null is now 0. They are equal.
+      alert(null == 0) // false. Using the equality operator, null is not converted into zero.
+      alert(null >= 0) // This is true. Null is converted into zero. So, it is greater or equal to zero.
+      alert(null < 8) // True. Null is 0
+      alert (null > 8) // False. Null is 0
+
+      //Null and undefined are equal using the equality operator. 
+
+      /*Undefined shouldn't be compared to other values. 
+      */
+     alert(undefined > 0) // false.Undefined doesn't equal to any other value aprt from null
+     alert(undefined == null) // True. Undefined equals to null using the equality operator.
+     
+    </script>
+</body>
+</html>

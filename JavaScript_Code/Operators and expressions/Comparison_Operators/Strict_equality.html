@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strict equality</title>
+  </head>
+  <body>
+    <script>
+      /*
+      The == comparison operator perfoms type coercion, which means it converts operands
+      of different types to numbers. 
+      Forexample: 
+      */
+
+      alert(0 == false); // True. In this case, false is converted to zero.
+      alert("" == false); // True. An empty string is also converted to zero.
+      alert(0 == "0"); // True. Here, the string "0" s converted to zero as well.
+
+      //What can we do to avoid such?
+
+      /*We should use a strict comparison operator === that checks values without type coercion.
+      In simple terms, if a and b are of different types, then a === b is false.
+      */
+
+      let a = "0";
+      let b = 0;
+      alert(a === b); // false
+
+      alert(0 === false); // false
+
+      alert("" === false); // false
+
+      /* There is also a strict non-equality !== similar to !=
+      It is recommended to use === for cleaner code that is not prone to errors. 
+      */
+    </script>
+  </body>
+</html>

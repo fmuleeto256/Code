@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operators exercise</title>
+  </head>
+  <body>
+    <script>
+      // Prefix and Postfix.
+      //1. What are the final values of all variables a, b, c and d after the code below?
+
+      let a = 1,
+        b = 1;
+
+      let c = ++a; // ?
+      let d = b++; // ?
+
+      alert(a); // Prefix: 2
+      alert(b); // Postfix after Increment: 2
+      alert(c); // c = ++a: 2
+      alert(d); // d = Postfix before Increment: 1
+
+      /*2. Assignment result.
+      What are the values of y and x after the code below?
+      */
+      let y = 2;
+
+      let x = 1 + (y *= 2);
+
+      alert(y); // y = 4: Multiplied by 2
+      alert(x); // x = 5: Calculated as 1 + 4
+
+      /*3. Type Conversions.
+
+      What are the results of these expressions?
+      */
+
+      "" + 1 + 0; //  Addition concatenates the string: "10"
+      "" - 1 + 0; //  Addition concatenates the string: "-10"
+      true + false; // true is 1 and false is 0: 1
+      6 / "3"; // Division changes strings into numbers: 2
+      "2" * "3"; // Multiplication changes strings into numbers: 6
+      4 + 5 + "px"; // The first operands are added, 45, then they are concatenated to a string: "9px";
+      "$" + 4 + 5; // If the string is first, it concatenates the numbers: "$45"
+      "4" - 2; // Subtraction changes the string into a number: 2
+      "4px" - 2; // 4px is a string, can't be changed into a number: NaN
+      "  -9  " + 5; // Addition concatenates strings: "   -9  5"
+      "  -9  " - 5; //Subtraction changes a string into a number: -14
+      null + 1; // null becomes zero: 1
+      undefined + 1; // undefined is NaN after numeric conversion: NaN
+      " \t \n" - 2; /*Space characters are trimmed off string start and end 
+      when a string is converted to a number. Here the whole string consists 
+      of space characters, such as \t, \n and a “regular” space between them. 
+      So, similarly to an empty string, so it becomes 0 : -2
+      */
+
+      /*4. Fix the addition:
+
+      */
+      let number1 = prompt("First number?", 1);
+      let number2 = prompt("Second number?", 2);
+
+      alert(number1 + number2); // 12. This output is wrong when we use default values.
+
+      /*
+      This is the because prompt returns results as strings.
+      We have to convert them into numbers before we add them. 
+      */
+      alert(+number1 + +number2); // This outputs 3.
+      //Or we can say:
+
+      alert(Number(number1) + Number(number2));
+
+      //Or we can add + before the prompt like this:
+
+      let t = +prompt("First number?", 1);
+      let h = +prompt("Second number?", 2);
+    </script>
+  </body>
+</html>
