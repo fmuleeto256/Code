@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The If statement</title>
+  </head>
+  <body>
+    <script>
+      /*
+       Sometimes, we need to perform different actions based on different conditions.
+
+        To do that, we can use the if statement and the conditional operator ?, 
+        that’s also called a “question mark” operator.
+       */
+      /*
+      The If statement evaluates a condition and if the result is true, it executes a block of code.
+      */
+
+      let emailAddress = prompt("Enter your email address", "");
+      if (emailAddress === "fmuleeto@gmail.com") {
+        alert("That's right");
+      }
+
+      //If we want to execute only one statement, we don't need to wrap it in curly brackets.
+      if (emailAddress === "fmuleeto@gmail.com") alert("You are the best");
+
+      //However, for very many statements, we have to use curly brackets.
+      /*Actually, we should always wrap our code in curly brackets even if it is one
+      statement to improve code readability.
+      */
+    </script>
+  </body>
+</html>

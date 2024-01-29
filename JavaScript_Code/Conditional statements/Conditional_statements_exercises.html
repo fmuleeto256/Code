@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conditional Statements Exercises</title>
+  </head>
+  <body>
+    <script>
+      /*1. if (a string with zero)
+        Will the condition be executed?
+
+        Yes, it will.
+
+        Any string except an empty one (and "0" is not empty) becomes true in the logical context.
+        
+        Let's check it out:
+        */
+      if ("0") {
+        alert("Hello World");
+      }
+
+      /*2. The name of JavaScript.
+      Using the if..else construct, write the code which asks: ‘What is the “official” name of JavaScript?’
+
+        If the visitor enters “ECMAScript”, then output “Right!”, otherwise – output: “You don’t know? ECMAScript!”
+      */
+
+      let JavaScriptOfficialName = prompt(
+        "What's the official name of Javacript?",
+        ""
+      );
+
+      if (JavaScriptOfficialName === "ECMAScript") {
+        alert("Right");
+      } else {
+        alert("You don't know! ECMAScript");
+      }
+
+      /*3.Show the sign:
+      Using if..else, write the code which gets a number via prompt and then shows in alert:
+
+        1, if the value is greater than zero,
+        -1, if less than zero,
+        0, if equals zero.
+      */
+
+      let number = prompt("Type a number", "");
+
+      if (number > 0) {
+        alert(1);
+      } else if (number < 0) {
+        alert(-1);
+      } else {
+        alert(0);
+      }
+
+      /*4. Rewrite 'if' into '?'
+        Rewrite this if using the conditional operator '?':
+        */
+
+      let result;
+      let a = 3;
+      let b = 5;
+
+      if (a + b < 4) {
+        result = "Below";
+      } else {
+        result = "Over";
+      }
+      //Let's use the ternary operator.
+
+      result = a + b < 4 ? "Below" : "Over";
+      alert(result);
+
+      /*Rewrite if..else using multiple ternary operators '?'.
+
+For readability, it’s recommended to split the code into multiple lines.
+*/
+      let loginDetails = prompt("Enter your details", "");
+      let message;
+
+      if (loginDetails == "Employee") {
+        message = "Hello";
+      } else if (loginDetails == "Director") {
+        message = "Greetings";
+      } else if (loginDetails == "") {
+        message = "No login";
+      } else {
+        message = "";
+      }
+
+      message =
+        loginDetails == "Employee"
+          ? "Hello"
+          : loginDetails == "Director"
+          ? "Greetings"
+          : loginDetails == ""
+          ? "No login"
+          : "Login details not verified";
+    </script>
+  </body>
+</html>

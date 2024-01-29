@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boolean Conversion</title>
+  </head>
+  <body>
+    <script>
+      /*
+    The if statement evaluates a condition in its parentheses and converts the result
+    to a boolean.
+    */
+      /* Let's recall conversion rules.
+   0, null, NaN, undefined and an empty string "" all evaluate to false, so we call them
+   falsy values.
+   Others evaluate to true, so we call them truthy values. 
+   */
+
+      //This code below would never execute because 0 is falsy.
+
+      if (1) {
+        alert("I love you"); // This will not execute because 0 is falsy and the if statement only works if the condition evaluates to true.
+      }
+      // This applies to all the other falsy values such as NaN, null, undefined and ""
+
+      //Inside thi condition, it will always execute because 1 is truthy.
+
+      if (1) {
+        alert("Nice"); // This will execute because 1 is a truthy value.
+      }
+
+      /*
+      We can also pass a pre-evaluated boolean value to an if statement like this:
+      */
+      let year = 2015;
+      let cond = year == 2015; // equality evaluates to true or false
+
+      if (cond) {
+        alert("Nice One");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The || OR Operator</title>
+  </head>
+  <body>
+    <script>
+      /* The || OR Operator:
+        This is represented with two vertical line symbols.       
+        */
+      /*If any values of the || OR Operator are true, it returns true, if they are all false,
+       it returns false.
+       */
+      let a = 0;
+      let b = 1;
+      let result = a || b; // This chooses the first truthy value, which is b.
+      alert(result);
+
+      //It has 4 possible logical combinations:
+
+      alert(true || true); // true
+      alert(false || true); // true
+      alert(true || false); // true
+      alert(false || false); // false
+
+      /*
+        As we can see, the result is always true except for the case when both operands are false.
+
+        If an operand is not a boolean, it’s converted to a boolean for the evaluation.
+
+        For instance, the number 1 is treated as true, the number 0 as false:
+      */
+
+      if (1 || 0) {
+        // works just like if( true || false )
+        alert("truthy!");
+      }
+
+      //Most of the time, OR || is used in an if statement to test if any of the given conditions is true.
+
+      let hour = 9;
+
+      if (hour < 10 || hour > 18) {
+        alert("The office is closed.");
+      }
+      //We can pass more conditions.
+      let hour2 = 12;
+      let isWeekend = true;
+
+      if (hour < 10 || hour > 18 || isWeekend) {
+        alert("The office is closed."); // it is the weekend
+      }
+    </script>
+  </body>
+</html>

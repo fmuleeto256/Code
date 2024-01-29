@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //NOT is represented by an exclamation sign !
+
+      /*1. It converts the operand to a boolean type.
+        2. Returns the inverse.
+
+        Forexample:
+        */
+      alert(!true); // false
+      alert(!0); // true
+
+      /*
+      A double NOT !! is sometimes used for converting a value to boolean type:
+      */
+      alert(!!"non-empty string"); // true
+      alert(!!null); // false
+
+      /*
+      That is, the first NOT converts the value to boolean and returns the inverse, and the second NOT inverses it again. In the end, we have a plain value-to-boolean conversion.
+
+      That's the same as this:
+      */
+      alert(Boolean("non-empty string")); // true
+      alert(Boolean(null)); // false
+
+      /*
+      The precedence of NOT ! is the highest of all logical operators, so it always executes first, before && or ||.
+      */
+    </script>
+  </body>
+</html>

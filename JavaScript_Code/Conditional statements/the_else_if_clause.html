@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The else if clause</title>
+  </head>
+  <body>
+    <script>
+      /*
+       Sometimes we want to evaluate several variants of a condition. The else if clause lets us do that.
+       */
+      let year = +prompt("In which year was Alma born?", "");
+
+      if (year > 2020) {
+        alert("Too late");
+      } else if (year < 2020) {
+        alert("Too early");
+      } else {
+        alert("Exactly");
+      }
+      /*In the code above, JavaScript first checks year < 2015. If that is falsy, 
+      it goes to the next condition year > 2015. If that is also falsy, 
+      it shows the last alert.
+
+      There can be more else if blocks. The final else is optional.
+      */
+      
+    </script>
+  </body>
+</html>

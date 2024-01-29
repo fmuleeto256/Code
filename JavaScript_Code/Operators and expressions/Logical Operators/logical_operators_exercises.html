@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //1. What's the result of OR?
+      //What is the code below going to output?
+      //console.log(null || 2 || undefined); // It will ouput 2. OR finds the first truthy value.
+
+      //2. What's the result of OR'ed alerts?
+      //What will the code below output?
+
+      //console.log(alert(1) || 2 || alert(3));
+
+      /*The alert function doesn't return a value, so the console will show 2 which is
+      the first truthy value.
+      */
+
+      //3. What is the result of AND?
+      //What is this code going to show?
+
+      //console.log(1 && null && 2); //AND finds the first falsy value which is null
+
+      //4. What's the result of AND'ed alerts?
+      // What is this code going to show?
+
+      //console.log(alert(1) && alert(2));
+      /*This prints one but it returns undefined in the console because AND returns the
+      first falsy value and alert(1) returns undefined.
+      */
+
+      //5. The result of OR AND OR
+      //What is this code going to show?
+
+      console.log(null || (2 && 3) || 4); // The answer is 3.
+      /* The precedence of && is greater than ||, and since AND outputs the last truthy
+         value, we get 3.
+         So, it becomes null|| 3 || 4. Since OR ouputs the first truthy value,
+         we get 3.
+         */
+
+      //6.Check the range between
+      //Write an if condition to check that age is between 14 and 90 inclusively.
+
+      if (age >= 14 && age <= 90);
+
+      //7.Check the range outside
+      //Write an if condition to check that age is NOT between 14 and 90 inclusively.
+
+      if (!(age <= 14 && age >= 90));
+      if (age <= 14 || age >= 90);
+
+      //7. A question about "if"
+      //Which of these alerts are going to execute?
+
+      //What will the results of the expressions be inside if(...)?
+
+      if (-1 || 0) alert("first"); // The alert will work. Because -1 is a truthy value.
+      if (-1 && 0) alert("second"); // The alert won't work because there is a falsy value 0
+      if (null || (-1 && 1)) alert("third");
+      /* The alert will work because -1 && 1 outputs 1, and the expression becomes null || 1.
+      since the OR || outputs the truthy value, the alert will work.
+
+      //Check the login
+
+      /*Write the code which asks for a login with prompt.
+
+        If the visitor enters "Admin", then prompt for a password, if the input is an empty line or Esc – show “Canceled”, if it’s another string – then show “I don’t know you”.
+
+        The password is checked as follows:
+
+        If it equals “TheMaster”, then show “Welcome!”,
+        Another string – show “Wrong password”,
+        For an empty string or cancelled input, show “Canceled”
+      */
+
+      let userName = prompt("Who's there?");
+      if (userName === "Admin") {
+        let pass = prompt("Password?");
+        if (pass === "TheMaster256") {
+          alert("Welcome");
+        } else if (pass === "" || pass === null) {
+          alert("Canceled");
+        } else {
+          alert("Wrong Password");
+        }
+      } else if (userName === "" || userName === null) {
+        alert("Canceled");
+      } else {
+        alert("I don't know you");
+      }
+    </script>
+  </body>
+</html>
