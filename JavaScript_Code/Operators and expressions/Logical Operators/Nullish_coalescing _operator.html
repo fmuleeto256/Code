@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The nullish coalescing operator</title>
+  </head>
+  <body>
+    <script>
+      /*The nullish coalescing operator is written as two question marks ??
+
+       The nullish coalescing operator is used to provide a default value for a variable if its current value is null or undefined.
+        It returns the right-hand operand when the left-hand operand is null or undefined; otherwise, it returns the left-hand operand.
+        It's often used in situations where you want to set a default value for a variable if it's not explicitly defined or is explicitly set to null or undefined.
+        Example: const result = someVariable ?? defaultValue;
+       */
+
+      // Example 1: Variable has a defined value
+      const someVariable = "Hello";
+      const result1 = someVariable ?? "Default Value";
+      console.log(result1); // Output: Hello
+
+      // Example 2: Variable is null
+      const nullVariable = null;
+      const result2 = nullVariable ?? "Default Value";
+      console.log(result2); // Output: Default Value
+
+      // Example 3: Variable is undefined
+      let undefinedVariable;
+      const result3 = undefinedVariable ?? "Default Value";
+      console.log(result3); // Output: Default Value
+
+      // Example 4: Providing a default value when variable is falsy but not null/undefined
+      const falsyVariable = 0;
+      const result4 = falsyVariable ?? "Default Value";
+      console.log(result4); // Output: 0 (since 0 is not null or undefined)
+
+      /*
+      In each example, the nullish coalescing operator (??) 
+      is used to provide a default value when the left-hand side 
+      variable is null or undefined. The result variable will contain the 
+      value of someVariable if it's not null or undefined, otherwise it will 
+      contain the specified default value 'Default Value'.
+      */
+    </script>
+  </body>
+</html>
